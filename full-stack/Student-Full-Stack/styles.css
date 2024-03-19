@@ -1,0 +1,44 @@
+body {
+    background-image: url("books.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+nav {
+    background-color: rgb(207, 116, 116);
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+button {
+    background-color: rgb(255, 239, 210);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    background-color: rgb(255, 239, 210);
+    border: 3px solid black;
+    border-radius: 5px;
+    padding-left: 25px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}

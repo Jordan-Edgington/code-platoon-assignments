@@ -1,0 +1,46 @@
+/* styles.css */
+body {
+  background-image: url("./arcade.jpg");
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+
+
+
+#game {
+  background-color: white;
+  border: 5px solid rgb(66, 66, 66);
+  border-radius: 50px;
+  margin: 200px 400px 200px 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center
+}
+
+#answer {
+  display: none;
+  position: absolute;
+  left: 120px;
+  top: 430px;
+  color: white;
+}
+
+#secret {
+  position: absolute;
+  left: 205px;
+  top: 590px;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+}
+
+
+h1 {
+  font-weight: 400
+}
+
+h2 {
+  font-weight: 400
+}

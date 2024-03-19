@@ -1,0 +1,38 @@
+body {
+    background-image: url("pokemonarena.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    width: 500px;
+    height: 60px;
+}
+
+#generate {
+    position: absolute;
+    top: 0px;
+    margin-top: 20px;
+}
+
+#type {
+    position: fixed;
+    top: 35%;
+    left: 46%;
+}
+
+#imgs {
+    position: fixed;
+    top: 43%;
+    left: 32%;
+}
+
+#reset {
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 20px;
+}

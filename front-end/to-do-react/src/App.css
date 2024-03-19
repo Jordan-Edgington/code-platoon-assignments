@@ -1,0 +1,80 @@
+body {
+  background-image: url("./wallpaper.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  color: rgb(234, 255, 192);
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+}
+
+#root {
+  max-width: 1280px;
+  position: absolute;
+  left: 20%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: rgb(72, 97, 74);
+  border: black solid 5px;
+  border-radius: 15px;
+}
+
+.card {
+  padding: 2em;
+}
+
+#textfield {
+  background-color: rgb(225, 225, 225);
+  border: black solid 3px;
+  border-radius: 5px;
+  padding-right: 5px;
+  margin-right: 20px;
+  color: black;
+}
+
+ul {
+  background-color: rgb(234, 255, 192);
+  border: 5px black solid;
+  width: 357px;
+  padding-right: 22px;
+  padding-left: 22px;
+  border-radius: 5px;
+  list-style-type: none;
+}
+
+
+
+li {
+  color: black;
+  border: 2px rgba(0, 0, 0, 0) solid;
+
+}
+
+li:hover {
+  background-color: rgb(254, 206, 135);
+  border: 2px black solid;
+  border-radius: 5px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+#submitButton {
+  background-color: rgb(225, 225, 225);
+  color: black;
+  border: black solid 3px;
+  border-radius: 5px;
+}
+
+#delete {
+  background-color: rgb(181, 70, 55);
+  color: rgb(0, 0, 0);
+  border: rgb(70, 46, 0) solid 2px;
+  border-radius: 5px;
+  padding: 0px;
+  margin-left: 20px;
+}
