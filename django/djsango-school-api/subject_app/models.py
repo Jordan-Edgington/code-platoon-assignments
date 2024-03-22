@@ -8,7 +8,7 @@ from student_app.models import Student
 class Subject(models.Model):
     subject_name = models.CharField(unique=True, validators=[
                                     validate_subject_format])
-    professor = models.CharField(unique=True, validators=[
+    professor = models.CharField(unique=False, validators=[
                                  validate_professor_name])
     students = models.ManyToManyField(
         Student, related_name='subjects', unique=False)
@@ -23,7 +23,7 @@ class Subject(models.Model):
             raise Exception('This subject is full!')
 
     def drop_a_student(self, id):
-        if id in self.students:
+        if id in self.students.all():
             self.students.remove(id)
         else:
             raise Exception('This subject is empty!')

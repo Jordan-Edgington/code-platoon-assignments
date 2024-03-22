@@ -30,3 +30,15 @@ class Student(models.Model):
     def changeStatus(self, bool):
         self.good_student = bool
         self.save()
+
+    def add_subject(self, id):
+        if self.subjects.count() < 8:
+            self.subjects.add(id)
+        else:
+            raise Exception('This students class schedule is full!')
+
+    def remove_subject(self, id):
+        if id in self.subjects.all():
+            self.subjects.remove(id)
+        else:
+            raise Exception('This students class schedule is empty!')
