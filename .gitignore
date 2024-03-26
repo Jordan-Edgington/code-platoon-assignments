@@ -1,5 +1,3 @@
 assessments/
 curriculum/
-django/djsango-school-api/.venv/
-django/pets_and_owners/.venv/
-django/django-validations/.venv/
+.venv/
