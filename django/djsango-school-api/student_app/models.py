@@ -3,6 +3,7 @@ from django.core import validators as v
 from .validators import validate_name_format
 from .validators import validate_combination_format
 from .validators import validate_school_email
+from subject_app.models import Subject
 # Create your models here.
 
 
@@ -19,6 +20,8 @@ class Student(models.Model):
         null=False, unique=False, default='12-12-12', validators=[v.MaxLengthValidator(8), validate_combination_format])  # Regex validator
     good_student = models.BooleanField(
         null=False, unique=False, default=True)  # No validator
+    subjects = models.ManyToManyField(
+        Subject, related_name='students', unique=False)
 
     def __str__(self):
         return f'{self.name} - {self.student_email} - {self.locker_number}'
@@ -33,7 +36,12 @@ class Student(models.Model):
 
     def add_subject(self, id):
         if self.subjects.count() < 8:
-            self.subjects.add(id)
+            print(self.subjects.all())
+            if self.subjects.filter(id=id):
+                raise Exception('This student is already taking that class!')
+            else:
+                self.subjects.add(id)
+
         else:
             raise Exception('This students class schedule is full!')
 
